@@ -15,7 +15,7 @@
     <title>WEBSTUDIO</title>
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header" id="home">
       <div class="container header-container">
         <nav class="nav-page">
           <a href="./index.html" class="link-logo-header"
@@ -29,7 +29,8 @@
             <li class="nav-item"><a href="" class="nav-link">Contacts</a></li>
           </ul>
         </nav>
-        <button class="mobile-menu-btn" type="button">
+        <button class="mobile-menu-btn" type="button"
+          data-menu-open>
             <svg class="mobile-menu-icon" width="24" height="24">
               <use href="./images/icons.svg#icon-menu"></use>
             </svg>
@@ -299,7 +300,7 @@
         </div>
       </section>
 
-      <section class="section-portfolio">
+      <section class="section-portfolio" id="portfolio">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -619,20 +620,20 @@
       </div>
     </div>
 
-<div class="mobile-menu">
-  <button class="mobile-menu-btn-close">
+<div class="mobile-menu" data-menu>
+  <button class="mobile-menu-btn-close" data-menu-close>
     <svg class="mobile-menu-btn-icon" width="8" height="8">
       <use href="./images/icons.svg#icon-hrest"></use>
     </svg>
   </button>
   <ul class="mobile-menu-list">
     <li class="mobile-menu-item">
-      <a href="#" class="mobile-menu-link">
+      <a class="mobile-menu-link" href="#home">
         Studio
       </a>
     </li>
     <li class="mobile-menu-item">
-      <a href="#" class="mobile-menu-link">
+      <a class="mobile-menu-link" href="#portfolio">
         Portfolio
       </a>
     </li>
@@ -688,6 +689,12 @@
    </ul>
 </div>
 
+<script src="./js/form.js" type="module">
+</script>
+<script src="./js/mobile-menu.js" type="module">
+</script>
+
 
   </body>
 </html>
+
