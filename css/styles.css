@@ -77,16 +77,13 @@ address {
 
 
 .page-header {
-  height: 72px;
-  display: flex;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
-
 }
+
 
 .header-container {
   background-color: #ffffff;
   display: flex;
-  gap: 40px;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--cornflower);
@@ -121,11 +118,16 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  padding: 16px 0;
   border: none;
   background-color: transparent;
   color: var(--black);
-  margin-right: auto;
+  
+}
+@media only screen and (min-width: 768px) {
+  .mobile-menu-btn {
+     margin-right: auto;
+  }
 }
 .mobile-menu-icon {
 stroke: currentColor;
@@ -166,7 +168,7 @@ stroke: currentColor;
   top: 24px;
   width: 24px;
   height: 24px;
-  background-color: var(--cornflower);
+  background-color: var(--dairy);
 
 }
 .mobile-menu-btn-icon {
@@ -175,6 +177,10 @@ stroke: currentColor;
 }
 .mobile-menu-list {
   margin-bottom: auto;
+}
+
+.mobile-menu-list > .mobile-menu-item:first-child .mobile-menu-link {
+color: var(--ocean);
 }
 .mobile-menu-link {
   font-weight: 700;
@@ -241,6 +247,7 @@ color: var(--iris);
   }
 }
 .nav-item {
+  padding: 24px 0;
   color: var(--navy-blue);
   font-weight: 500;
   line-height: 1.5;
@@ -287,15 +294,20 @@ color: var(--iris);
 .contacts {
   color: var(--slate);
   font-style: normal;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  margin-left: auto
 }
 
 @media only screen and (min-width: 1158px) {
   .contacts-list {
     display: flex;
     gap: 40px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
   }
 } 
 
@@ -460,7 +472,7 @@ padding: 96px 16px;
   max-width: 288px;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  padding: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -468,6 +480,7 @@ padding: 96px 16px;
     max-width: 736px;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 0 auto;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -638,6 +651,7 @@ padding: 96px 16px;
 @media only screen and (min-width: 1158px) {
   .team-list {
     flex-wrap: nowrap;
+    padding: 0;
     gap: 24px;
   }
 }
@@ -876,8 +890,9 @@ padding: 96px 16px;
 }
 @media only screen and (min-width: 1158px) {
   .footer-wrap {
-    
-    
+    flex-wrap: nowrap;
+    padding-left: 0;
+    gap: 0;
   }
 }
 
@@ -1095,11 +1110,11 @@ padding: 96px 16px;
 }
 .modal {
   position: absolute;
-    top: 40%;
-    left: 50%;
+  top: 50%;
+  left: 50%;
   min-width: 288px;
   min-height: 623px;
-  padding: 0 16px;
+  padding: 72px 16px 24px;
   background-color: var(--dairy);
   opacity: 0;
   transform: translateX(-50%) translateY(-50%);
