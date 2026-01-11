@@ -202,7 +202,8 @@ color: var(--ocean);
   margin-bottom: 24px;
 
 }
-.mobile-menu-contacts-item:first-child .mobile-menu-link {
+
+.mobile-menu-contacts > .mobile-menu-contacts-item:first-child .mobile-menu-contacts-link {
 color: var(--iris);
 }
 .mobile-menu-contacts-link {
